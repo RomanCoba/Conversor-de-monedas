@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -24,6 +26,8 @@ public class Principal {
 	     BigDecimal yen = new BigDecimal("8.2");
 	     BigDecimal won = new BigDecimal("75.19");
 	     
+	     
+	     
 	 
 		 
 		 
@@ -47,43 +51,43 @@ public class Principal {
 	        case "De Pesos a Dolar":
 	        	//conversion = Math.round(cantidadDinero * 0.059);
 	        	cantidadDinero = cantidadDinero.multiply(dolar);
-	        	JOptionPane.showMessageDialog(null, cantidadDinero);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " dolares");
 	         break;
 	        case "De Pesos a Euros":
 	        	cantidadDinero = cantidadDinero.multiply(euro);
-	        	JOptionPane.showMessageDialog(null, cantidadDinero);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " euros");
 	         break;
 	        case "De Pesos a Libras Esterlinas" :
 	        	cantidadDinero = cantidadDinero.multiply(libra);
-	        	JOptionPane.showMessageDialog(null, cantidadDinero);;
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " libras esterlinas");;
 	         break;
 	        case "De Pesos a Yen Japonés":
 	        	cantidadDinero = cantidadDinero.multiply(yen);
-	        	JOptionPane.showMessageDialog(null, cantidadDinero);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " yenes");
 	         break;
 	        case "De Pesos a Won sul-coreano":
 	        	cantidadDinero = cantidadDinero.multiply(won);
-	        	JOptionPane.showMessageDialog(null, cantidadDinero);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " wones");
 	         break;
 	        case "De Dolar a Pesos" :
-	        //	conversion = cantidadDinero * 16.87;
-	        	//JOptionPane.showMessageDialog(null, conversion);
+	        	cantidadDinero = cantidadDinero.divide(dolar,2, RoundingMode.HALF_EVEN);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " pesos");
 	         break;
 	        case "De Euros a Pesos" :
-	        	//conversion = cantidadDinero * 18.91;
-	        	//JOptionPane.showMessageDialog(null, conversion);
+	        	cantidadDinero = cantidadDinero.divide(euro,2, RoundingMode.HALF_EVEN);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " pesos");
 		         break;
 	        case "De Libras Esterlinas a Pesos" :
-	        	//conversion = cantidadDinero * 22.13;
-	        	//JOptionPane.showMessageDialog(null, conversion);
+	        	cantidadDinero = cantidadDinero.divide(libra,2, RoundingMode.HALF_EVEN);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " pesos");
 	         break;
 	        case "De Yen Japonés a Pesos":
-	        	//conversion = cantidadDinero * 0.12;
-	        	//JOptionPane.showMessageDialog(null, conversion);
+	        	cantidadDinero = cantidadDinero.divide(yen,2, RoundingMode.HALF_EVEN);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " pesos");
 	         break;
 	        case "De Won sul-coreano a Pesos":
-	        	//conversion = cantidadDinero * 0.013;
-	        	//JOptionPane.showMessageDialog(null, conversion);
+	        	cantidadDinero = cantidadDinero.divide(won,2, RoundingMode.HALF_EVEN);
+	        	JOptionPane.showMessageDialog(null, "Tienes " + cantidadDinero + " pesos");
 	         break;
 	        default:
 	        	JOptionPane.showMessageDialog(null, "ADIOS");
