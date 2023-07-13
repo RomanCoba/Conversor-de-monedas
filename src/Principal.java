@@ -9,8 +9,10 @@ public class Principal {
 		 String[] menu = {"Conversor de moneda", "Conversor de Temperatura"}; //tipos de conversion
 		 String opcionConversion = null; //variable para guardar el tipo de conversion
 		 double cantidadDinero = 0; //variable para guardar la cantidad de dinero a convertir
-		 String[] opcionMonedas = {};
-		 String moneda = null;
+		 String[] monedas = {"De Pesos a Dolar","De Pesos a Euros","De Pesos a Libras Esterlinas",
+				 "De Pesos a Yen Japonés","De Pesos a Won sul-coreano","De Dolar a Pesos",
+				 "De Euros a Pesos","De Libras Esterlinas a Pesos","De Yen Japonés a Pesos","De Won sul-coreano a Pesos"};
+		 String opcionMoneda = null;
 		 
 
 		 //cuadro de dialogo para elegir la opcion de conversion
@@ -21,8 +23,9 @@ public class Principal {
 	    if(opcionConversion == "Conversor de moneda") {
 	    	
 	    	cantidadDinero = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la cantidad que desea convertir:"));
-	    	moneda = (String) JOptionPane.showInputDialog(null,"Seleccione una opción de conversión",
-		    		"Menu",JOptionPane.QUESTION_MESSAGE, null,menu,menu[0]);
+	    	opcionMoneda = (String) JOptionPane.showInputDialog(null,"Seleccione una opción de conversión",
+		    		"Menu",JOptionPane.QUESTION_MESSAGE, null,monedas,monedas[0]);
+	    	
 	    }
 	    
 	    
